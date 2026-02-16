@@ -60,7 +60,7 @@ resume = False
 log = "error_log.txt"
 
 ########### Model ###########
-model = Deep3d(device=device).to(device)
+model = Deep3dScaled(device=device).to(device)
 if(resume):
     model.load_state_dict(torch.load(save_file))
 print(model)
